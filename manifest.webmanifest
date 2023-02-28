@@ -1,6 +1,6 @@
 {
-  "name": "mmf-app",
-  "short_name": "mmf-app",
+  "name": "app-mmf",
+  "short_name": "app-mmf",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
