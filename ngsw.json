@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1677585688390,
+  "timestamp": 1677587188405,
   "index": "/mmf-app/index.html",
   "assetGroups": [
     {
@@ -54,7 +54,7 @@
     "/mmf-app/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/mmf-app/index.html": "90a670e14bbfa22c2edac6396f66fc83afd3f794",
     "/mmf-app/main.e0a9fbf9e8914938.js": "174048114ee38d4b613ea9d4ae22949e479527a6",
-    "/mmf-app/manifest.webmanifest": "3202cbffb608ecc18be304f3b94424ef3ec036d1",
+    "/mmf-app/manifest.webmanifest": "eba3c2b3b8206e2731af6121fb8240c87a994ea9",
     "/mmf-app/polyfills.cbcb29f35b1aaee4.js": "d2b7b7fb7a14df802c2aef5f5ead8ba0671e83fd",
     "/mmf-app/runtime.51a75df484c2dc38.js": "e8ad3d98b4c34e565a24b186c6c1aa0edb563104",
     "/mmf-app/styles.ef46db3751d8e999.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
