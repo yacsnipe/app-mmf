@@ -7,7 +7,7 @@ const routes: Routes = [
     redirectTo: 'agenda',
     pathMatch: 'full'
   },
-  { path: 'agenda', loadChildren: () => import('../agenda/agenda.module').then(m => m.AgendaModule) }
+  { path: 'agenda', loadChildren: () => import('./features/agenda/agenda.module').then(m => m.AgendaModule) }
 ];
 
 @NgModule({

@@ -26,11 +26,11 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
+              "src/app/assets",
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.css"
+              "src/app/styles.css"
             ],
             "scripts": []
           },
@@ -91,11 +91,11 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
+              "src/app/assets",
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.css"
+              "src/app/styles.css"
             ],
             "scripts": []
           }
