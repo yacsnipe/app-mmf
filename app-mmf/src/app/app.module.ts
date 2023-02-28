@@ -2,6 +2,7 @@ import {isDevMode, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
+import {AuthService} from "./core/services/auth.service";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import {ServiceWorkerModule} from '@angular/service-worker';
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
