@@ -31,11 +31,11 @@ export class SigninComponent implements OnInit {
 
   onSubmit() {
 
-    const email = this.signinForm.get('email').value;
-    const password = this.signinForm.get('password').value;
-    this.authService.signInUser(email, password).then(
+    const email = this.signinForm.get('email')?.value;
+    const password = this.signinForm.get('password')?.value;
+    this.authService.signIn(email, password).then(
       () => {
-        // this.router.navigate(['dashboard-view']);
+        this.router.navigate(['dashboard-view']).then();
       },
       (error) => {
         this.errorMessage = error;

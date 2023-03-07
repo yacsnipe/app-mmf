@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut} from "firebase/auth";
+import {Observable} from "rxjs";
 
 @Injectable()
 export class AuthService {
@@ -21,8 +22,7 @@ export class AuthService {
     );
   }
 
-  public signInUser(email: string, password: string) {
-
+  public signIn(email: string, password: string) {
     return new Promise(
       (resolve, reject) => {
         signInWithEmailAndPassword(this.auth, email, password)
@@ -36,6 +36,12 @@ export class AuthService {
           });
       }
     );
+  }
+
+  public isSignedIn(): Observable<boolean> {
+    return new Observable((subscriber) => {
+      subscriber.next(this.auth.currentUser ? true : false);
+    });
   }
 
   public signOutUser() {

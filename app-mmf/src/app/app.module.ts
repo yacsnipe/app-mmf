@@ -3,10 +3,15 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {AuthService} from "./core/services/auth.service";
+import {SignupComponent} from "./core/components/auth/signup/signup.component";
+import {SigninComponent} from "./core/components/auth/signin/signin.component";
+import {RouterOutlet} from "@angular/router";
+import {ReactiveFormsModule} from "@angular/forms";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, SignupComponent, SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -15,7 +20,10 @@ import {AuthService} from "./core/services/auth.service";
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    RouterOutlet,
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
