@@ -11,13 +11,15 @@ export class PermissionService {
 
   isAllowed(permissions: Permission[]): boolean {
     const user = this.auth.currentUser;
-    return true// permissions.includes(user?.providerData[0].uid);
+    return true;// permissions.includes(user?.providerData[0].uid);
   }
-
 }
 
-/*export const canMatch = (permissions: Permission[], permissionService = inject(PermissionService)) =>
-  permissionService.isAllowed(permissions);*/
+export const canMatch = (permissions: Permission[]) => {
+  const permissionService = inject(PermissionService);
+  return permissionService.isAllowed(permissions);
+}
+
 export const canActivate: CanActivateFn = (
   route: ActivatedRouteSnapshot,
   state: RouterStateSnapshot
@@ -26,9 +28,10 @@ export const canActivate: CanActivateFn = (
   const router = inject(Router);
 
   return authService.isSignedIn().pipe(
-    map(() => true),
+    map((isSignedIn) => !!isSignedIn),
     catchError(() => {
-      router.navigate(['dashboard-view']).then();
+      console.log('in err');
+      router.navigate(['auth/signin']).then();
       return of(false);
     })
   );

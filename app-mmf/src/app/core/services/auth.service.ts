@@ -39,8 +39,9 @@ export class AuthService {
   }
 
   public isSignedIn(): Observable<boolean> {
+    console.log(this.auth.currentUser);
     return new Observable((subscriber) => {
-      subscriber.next(this.auth.currentUser ? true : false);
+      this.auth.currentUser ? subscriber.next(true) : subscriber.error(false)
     });
   }
 

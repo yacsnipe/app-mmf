@@ -17,7 +17,6 @@ export class DashboardViewComponent implements OnInit {
   ngOnInit() {
 
     const today = new Date();
-
     if (today.getDay() > 0 && today.getDay() < 4) {
       this.openSnackBar('', 'hello', 10000);
     }
