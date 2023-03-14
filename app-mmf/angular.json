@@ -30,9 +30,12 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/app/styles.css"
+              "src/app/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
